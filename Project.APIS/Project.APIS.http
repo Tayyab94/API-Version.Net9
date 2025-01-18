@@ -1,0 +1,31 @@
+@Project.APIS_HostAddress = http://localhost:5226
+
+GET {{Project.APIS_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
+
+
+GET {{Project.APIS_HostAddress}}/api/v1/Product
+Accept: application/json
+
+###
+
+GET {{Project.APIS_HostAddress}}/api/v1/Product/1
+Accept: application/json
+
+###
+
+
+GET {{Project.APIS_HostAddress}}/api/v2/Product/3
+Accept: application/json
+x-user-id:User1
+x-user-groups:internal-user,beta-testers
+###
+
+
+GET {{Project.APIS_HostAddress}}/api/v2/Product/3
+Accept: application/json
+x-user-id:User0
+x-user-groups:internal-user,beta-testers
+###
